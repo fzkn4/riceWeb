@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pricing</title>
+    <link rel="stylesheet" href="./css/pricing.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/node_modules/chart.js/dist/chart.umd.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fontawesome.com/icons/magnifying-glass?f=classic&s=light"
+    />
+  </head>
+
+  <body>
+    <nav class="menu">
+      <div class="logo-container">
+        <img src="./img/logo.png" class="img_logo" />
+        <div class="text-content">
+          <div style="font-size: 2em; font-weight: 700">
+            <span style="color: #bacd92">RR</span
+            ><span style="color: #eabd3d">PP</span>
+          </div>
+          <div class="subtitle">Navigating Prices, Securing Futures</div>
+        </div>
+      </div>
+
+      <a href="C:\Users\Fzkn4\Music\Fzkn4\ProjectShitshow\RicePricePredictor\Home.html" class="nav-link home">
+        <span class="icon"><img src="./img/home.png" /></span> Home
+      </a>
+      <a href="C:\Users\Fzkn4\Music\Fzkn4\ProjectShitshow\RicePricePredictor\Pricing.html" class="nav-link pricing active">
+        <span class="icon"><img src="./img/peso_symbol.png" /></span> Pricing
+      </a>
+      <a href="C:\Users\Fzkn4\Music\Fzkn4\ProjectShitshow\RicePricePredictor\About.html" class="nav-link about">
+        <span class="icon"><img src="./img/about.png" /></span> About
+      </a>
+    </nav>
+
+    <div class="main-content">
+      <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-bar" style="text-align: left; font-weight: 400;"/>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+        <div class="content-wrapper">
+          <div id="pop-up"  style="display:none;" class="pop-up-container" >
+            <div class="pop-up-window">
+              <section class="pop-up-window-layout">
+                <div class="close-button-container">
+                  <button class="close-button" onclick='hideDiv()'>&#x2715;</button>
+                </div>
+                <div class="pop-up-Header">
+                  <h1>Predicted Retail Price</h1>
+                </div>
+                <div class="pop-up-Month">
+                  <p>Month:</p>
+                </div>
+                <div class="pop-up-Month-item">
+                  <div class="container">December</div>
+                </div>
+                <div class="pop-up-Year">
+                  <p>Year: </p>
+                </div>
+                <div class="pop-up-Year-item">
+                  <div class="container">2024</div>
+                </div>
+                <div class="pop-up-RiceType">
+                  <p>Rice Type: </p>
+                </div>
+                <div class="pop-up-RiceType-item">
+                  <div class="container">Premium</div>
+                </div>
+                <div class="pop-up-RetailPrice">
+                  <p>Retail Price (per/kg): </p><br>
+                </div>
+                <div class="pop-up-RetailPrice--item">
+                  <div class="container">50.00</div>
+                </div>
+              </section>
+            </div>
+          </div>
+            <section class="layout">
+                <div class="retail-price-container">
+                  <div class="headline-container" style="text-align: center; margin-bottom: 2%; font-size: 1.5vw; font-weight: bold;">Overview of our Rice Retail Prices</div>
+                    <div class="container">
+                        <div class="dropdown-container">Start Year:
+                            <select name="year-options" id="" class="start-year">
+                              <option value="2024">2024</option>
+                              <option value="2023">2023</option>
+                              <option value="2022">2022</option>
+                              <option value="2021">2021</option>
+                            </select>
+                            End Year: 
+                            <select name="year-options" id="" class="end-year">
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                              </select>
+                          </div>
+                        <div>
+                            <canvas id="retail-price-chart" class="chart"></canvas>
+                          </div>
+                    </div>
+                </div>
+                <div class="retail-price-prediction">
+                  <h2>Retail Rice Prediction</h2>
+                  <div class="retail-rice-prediction-container">
+                    <section class="retail-rice-prediction-layout">
+                      <div class="year-text"><p style="font-size: 1vw;">Year: </p></div>
+                      <div class="year-item"><input type="text"></div>
+                      <div class="month-text"><p style="font-size: 1vw;">Month: </p></div>
+                      <div class="month-item">
+                        <select name="year-options" id="" class="start-year">
+                          <option value="2024">January</option>
+                          <option value="2023">February</option>
+                          <option value="2022">March</option>
+                          <option value="2021">April</option>
+                          <option value="2021">May</option>
+                          <option value="2021">June</option>
+                          <option value="2021">July</option>
+                          <option value="2021">August</option>
+                          <option value="2021">September</option>
+                          <option value="2021">November</option>
+                          <option value="2021">December</option>
+                        </select>
+                      </div>
+                      <div class="ricetype-text"><p style="font-size: 1vw;">Rice Type: </p></div>
+                      <div class="ricetype-item">
+                        <select name="year-options" id="" class="start-year">
+                          <option value="2024">Regular</option>
+                          <option value="2023">Well Milled</option>
+                          <option value="2022">Premium</option>
+                          <option value="2021">Special</option>
+                        </select>
+                      </div>
+                      <div class="inflation-text"><p style="font-size: 1vw;">Inflation Rate: </p></div>
+                      <div class="inflation-item"><input type="text"></div>
+                      <div class="season-text"><p style="font-size: 1vw;">Season: </p></div>
+                      <div class="season-item">
+                        <select name="year-options" id="" class="start-year">
+                          <option value="2024">Dry</option>
+                          <option value="2023">Rainy</option>
+                        </select>
+                      </div>
+                      <div class="riceprice-text"><p style="font-size: 1vw;">Rice Price: </p> </div>
+                      <div class="riceprice-item"><input type="text"></div>
+                      <div class="prediction-button">
+                        <input type="button" name="answer" value="Predict" class="predict-button" onclick="showDiv()" />
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </section>
+        </div>
+<!-- 
+        <div class="about-us">
+          <div class="logo-container">
+            <img src="img/logo.png" class="img_logo" />
+            <div class="text-content">
+              <div style="font-size: 2em; font-weight: 700">
+                <span style="color: #bacd92">RR</span
+                ><span style="color: #eabd3d">PP</span>
+              </div>
+              <div class="subtitle">Navigating Prices, Securing Futures</div>
+            </div>
+          </div>
+
+          <div class="welcome">
+            <h3>About us</h3>
+            <p>Welcome to RRPP (Rice Retail Price Prediction), your go-to platform for accurate and insightful forecasts on rice prices in the Philippines. Our mission at RRPP is to empower individuals and businesses within the rice industry with the knowledge they need to make informed decisions and thrive in a dynamic market environment.</p>
+          </div>
+
+          <div class="description">
+            <h3>Why Choose RRPP?</h3>
+            
+            <p><i class="fa-solid fa-circle-check" style="margin-right: 10px;"></i>Join the RRPP community today to unlock the power of data-driven decision-making in rice, whether you're a seasoned pro or a newcomer, as we're here to support your success journey.</p>
+
+            <p><i class="fa-solid fa-circle-check" style="margin-right: 10px;"></i>Our goal is to benefit everyone in the rice industry, from small farmers to big traders, with our forecasts enabling smarter decisions and increased profitability.</p>
+            
+            <p><i class="fa-solid fa-circle-check" style="margin-right: 10px;"></i>We've crafted accurate predictions by analyzing past prices and market trends. Let's leverage rice price prediction for growth and prosperity in the Philippines.</p>
+          </div>
+
+        </div> -->
+
+    </div>
+  </body>
+
+  <script>
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      link.addEventListener("click", function () {
+        document
+          .querySelectorAll(".nav-link")
+          .forEach((link) => link.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+
+// chart script
+const ctx = document.getElementById('retail-price-chart');
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+    datasets: [{
+      label: 'Special',
+      data: [12, 19, 3, 5, 2, 3, 45, 12, 23, 34, 22, 12],
+      borderWidth: 1,
+      pointBackgroundColor: 'rgba(255,255,255, 0.9)',
+      radius: 5
+    }, {
+      label: 'Well Milled',
+      data: [2, 5, 32, 1, 3, 5, 56, 43, 33, 21, 12, 22],
+      borderWidth: 1,
+      pointBackgroundColor: 'rgba(255,255,255, 0.9)',
+      radius: 5
+
+    }, {
+      label: 'Premium',
+      data: [3, 6, 11, 35, 65, 24, 65, 43, 33, 66, 67,89],
+      borderWidth: 1,
+      pointBackgroundColor: 'rgba(255,255,255, 0.9)',
+      radius: 5
+
+    }, {
+      label: 'Regular',
+      data: [5, 23, 45, 11, 23, 4, 67, 77, 78, 88, 89, 90],
+      borderWidth: 1,
+      pointBackgroundColor: 'rgba(255,255,255, 0.9)',
+      radius: 5
+
+    }]
+  },
+  options: {
+    plugins:{
+      legend: {
+      position: 'left'
+    }},
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    },
+  }
+});
+
+// showing pop-up window
+function showDiv() {
+   document.getElementById('pop-up').style.display = "block";
+}
+
+// showing pop-up window
+function hideDiv() {
+   document.getElementById('pop-up').style.display = "None";
+}
+  </script>
+</html>

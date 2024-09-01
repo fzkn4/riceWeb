@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/home.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/node_modules/chart.js/dist/chart.umd.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://fontawesome.com/icons/magnifying-glass?f=classic&s=light"
+    />
+  </head>
+
+  <body>
+    <nav class="menu">
+      <div class="logo-container">
+        <img src="./img/logo.png" class="img_logo" />
+        <div class="text-content">
+          <div style="font-size: 2em; font-weight: 700">
+            <span style="color: #bacd92">RR</span
+            ><span style="color: #eabd3d">PP</span>
+          </div>
+          <div class="subtitle">Navigating Prices, Securing Futures</div>
+        </div>
+      </div>
+
+      <a href="C:\Users\Fzkn4\Music\Fzkn4\ProjectShitshow\RicePricePredictor\Home.html" class="nav-link home active">
+        <span class="icon"><img src="img/home.png" /></span> Home
+      </a>
+      <a href="C:\Users\Fzkn4\Music\Fzkn4\ProjectShitshow\RicePricePredictor\Pricing.html" class="nav-link pricing">
+        <span class="icon"><img src="img/peso_symbol.png" /></span> Pricing
+      </a>
+      <a href="C:\Users\Fzkn4\Music\Fzkn4\ProjectShitshow\RicePricePredictor\About.html" class="nav-link about">
+        <span class="icon"><img src="img/about.png" /></span> About
+      </a>
+    </nav>
+
+    <div class="main-content">
+      <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-bar" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+        <div class="content-wrapper">
+          <section class="layout">
+            <div class="container1"><div class="container">
+              <!-- content of the displayed price -->
+                <section class="price-display-layout">
+                <div class="header-description-text">Price Today <i class="fa fa-info-circle" aria-hidden="true"></i></div>
+                <div class="price-display"><span class="peso-sign">&#8369;</span> 50.00/kg</div>
+                <div class="scale-growth-percentage"><span class="arrow">&#8679;</span> 0.1% vs yesterday</div>
+                </section>
+            </div></div>
+            
+            <div class="container2"><div class="container">
+              <section class="price-display-layout">
+                <div class="header-description-text">Highest this week <i class="fa fa-info-circle" aria-hidden="true"></i></div>
+                <div class="price-display"><span class="peso-sign">&#8369;</span> 53.00/kg</div>
+                <div class="scale-growth-percentage"><span class="arrow">&#8679;</span> 0.5% vs last week</div>
+                </section>
+            </div></div>
+            <div class="container3"><div class="container">
+              <section class="price-display-layout">
+                <div class="header-description-text">Highest this month <i class="fa fa-info-circle" aria-hidden="true"></i></div>
+                <div class="price-display"><span class="peso-sign">&#8369;</span> 55.00/kg</div>
+                <div class="scale-growth-percentage"><span class="arrow">&#8679;</span> 0.2% vs this month</div>
+                </section>
+            </div></div>
+            <div class="text-display">Suggested Months for Good Harvest</div>
+            <div class="graph"><div class="graph-container">
+              <section class="graph-container-layout">
+                <div class="year-container">Year:
+                  <select name="year-options" id="">
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                  </select>
+                </div>
+                <div class="graph-container">
+                  <div>
+                    <canvas id="line-chart"></canvas>
+                  </div>
+                </div>
+              </section>
+            </div></div>
+          </section>
+
+          <div class="right-menu">
+            <h1 style="text-align: center;font-size: 22px;font-family: Verdana; font-weight: bold;">Latest Updates</h1>
+            <div class="update-container">
+              <section class="update-container-layout">
+                <div class="header-description-text"><i class="fa-regular fa-calendar"></i> July 2024</div>
+                <div class="price-display"><span class="peso-sign">&#8369;</span> 53.00/kg</div>
+                <div class="scale-growth-percentage"><span class="arrow">&#8679;</span> 0.2% Rise</div>
+                </section>
+            </div>
+            <div class="update-container">
+              <section class="update-container-layout">
+                <div class="header-description-text"><i class="fa-regular fa-calendar"></i> July 2024</div>
+                <div class="price-display"><span class="peso-sign">&#8369;</span> 53.00/kg</div>
+                <div class="scale-growth-percentage"><span class="arrow">&#8679;</span> 0.2% Rise</div>
+                </section>
+            </div>
+            <div class="update-container">
+              <section class="update-container-layout">
+                <div class="header-description-text"><i class="fa-regular fa-calendar"></i> July 2024</div>
+                <div class="price-display"><span class="peso-sign">&#8369;</span> 53.00/kg</div>
+                <div class="scale-growth-percentage"><span class="arrow">&#8679;</span> 0.2% Rise</div>
+                </section>
+            </div>
+            <div class="update-container">
+              <section class="update-container-layout">
+                <div class="header-description-text"><i class="fa-regular fa-calendar"></i> July 2024</div>
+                <div class="price-display"><span class="peso-sign">&#8369;</span> 53.00/kg</div>
+                <div class="scale-growth-percentage"><span class="arrow">&#8679;</span> 0.2% Rise</div>
+                </section>
+            </div>
+            <div class="update-container">
+              <section class="update-container-layout">
+                <div class="header-description-text"><i class="fa-regular fa-calendar"></i> July 2024</div>
+                <div class="price-display"><span class="peso-sign">&#8369;</span> 53.00/kg</div>
+                <div class="scale-growth-percentage"><span class="arrow">&#8679;</span> 0.2% Rise</div>
+                </section>
+            </div><div class="update-container">
+              <section class="update-container-layout">
+                <div class="header-description-text"><i class="fa-regular fa-calendar"></i> July 2024</div>
+                <div class="price-display"><span class="peso-sign">&#8369;</span> 53.00/kg</div>
+                <div class="scale-growth-percentage"><span class="arrow">&#8679;</span> 0.2% Rise</div>
+                </section>
+            </div>
+            
+
+          </div>
+        </div>
+<!-- 
+        <div class="about-us">
+          <div class="logo-container">
+            <img src="img/logo.png" class="img_logo" />
+            <div class="text-content">
+              <div style="font-size: 2em; font-weight: 700">
+                <span style="color: #bacd92">RR</span
+                ><span style="color: #eabd3d">PP</span>
+              </div>
+              <div class="subtitle">Navigating Prices, Securing Futures</div>
+            </div>
+          </div>
+
+          <div class="welcome">
+            <h3>About us</h3>
+            <p>Welcome to RRPP (Rice Retail Price Prediction), your go-to platform for accurate and insightful forecasts on rice prices in the Philippines. Our mission at RRPP is to empower individuals and businesses within the rice industry with the knowledge they need to make informed decisions and thrive in a dynamic market environment.</p>
+          </div>
+
+          <div class="description">
+            <h3>Why Choose RRPP?</h3>
+            
+            <p><i class="fa-solid fa-circle-check" style="margin-right: 10px;"></i>Join the RRPP community today to unlock the power of data-driven decision-making in rice, whether you're a seasoned pro or a newcomer, as we're here to support your success journey.</p>
+
+            <p><i class="fa-solid fa-circle-check" style="margin-right: 10px;"></i>Our goal is to benefit everyone in the rice industry, from small farmers to big traders, with our forecasts enabling smarter decisions and increased profitability.</p>
+            
+            <p><i class="fa-solid fa-circle-check" style="margin-right: 10px;"></i>We've crafted accurate predictions by analyzing past prices and market trends. Let's leverage rice price prediction for growth and prosperity in the Philippines.</p>
+          </div>
+
+        </div> -->
+
+    </div>
+  </body>
+
+  <script>
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      link.addEventListener("click", function () {
+        document
+          .querySelectorAll(".nav-link")
+          .forEach((link) => link.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+
+// chart script
+const ctx = document.getElementById('line-chart');
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Nov', 'Dec'],
+    datasets: [{
+      label: 'Special',
+      data: [12, 19, 3, 5, 2, 3, 45, 12, 23, 34, 22, 12],
+      borderWidth: 1,
+      pointStyle: false,
+    }, {
+      label: 'Well Milled',
+      data: [2, 5, 32, 1, 3, 5, 56, 43, 33, 21, 12, 22],
+      borderWidth: 1,
+      pointStyle: false
+
+    }, {
+      label: 'Premium',
+      data: [3, 6, 11, 35, 65, 24, 65, 43, 33, 66, 67,89],
+      borderWidth: 1,
+      pointStyle: false
+
+    }, {
+      label: 'Regular',
+      data: [5, 23, 45, 11, 23, 4, 67, 77, 78, 88, 89, 90],
+      borderWidth: 1,
+      pointStyle: false
+
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+
+  </script>
+</html>
