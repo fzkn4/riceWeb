@@ -182,11 +182,12 @@ body {
     grid-area: why-choose;
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 83%;
     max-height: fit-content;
     background-color: #F6D776;
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
+    margin: 0 auto;
 }
 
 .logo-picture{
@@ -195,6 +196,7 @@ body {
     justify-content: center;
     align-items: center;
     float: left;
+    margin-top: 9%;
 }
 
 .about-content{
@@ -202,10 +204,17 @@ body {
     height: 100%;
     text-align: center;
     background-color: #F6D776;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
+    float: right;
+    margin-right: 100px;
+    margin-top: 3%;
 }
 
+.why-choose .why-contents p
+{
+    font-size: 1vw;
+}
 
 /* about us body layout  */
 .about-body-layout {
